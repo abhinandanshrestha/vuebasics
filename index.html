@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Vue</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <h1>Hello, Vue</h1>
+
+    <div id="app">
+        <div v-if="showBooks">
+            <p>{{title}} - {{age}}</p>
+            <button v-on:click="age++">Increase age</button>
+            <button @click="age--">Decrease age</button> 
+            <button @click="changeTitle">changetitle</button> 
+            <button @click="changeTitle('Title with argument')">Title with Argument</button> 
+        </div>
+        <button @click="toggleShowBooks">
+            <span v-if="showBooks">Hide Books</span>
+            <!-- <span v-if="!showBooks">Show Books</span> -->
+            <span v-else="!showBooks">Show Books</span>
+        </button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
