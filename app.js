@@ -1,21 +1,19 @@
 const app = Vue.createApp({
-    //data, function
-    // template: '<h1>I\'m the template</h1>'
-    data(){
-        return {
-            showBooks: true,
-            title: 'The final empire',
-            age:45
-        }
+    data() {
+      return {
+        showBooks: true,
+        books: [
+          { title: 'name of the wind', author: 'patrick rothfuss' },
+          { title: 'the way of kings', author: 'brandon sanderson' },
+          { title: 'the final empire', author: 'brandon sanderson' },
+        ],
+      }
     },
     methods: {
-        changeTitle(title){
-            this.title = title
-        },
-        toggleShowBooks(){
-            this.showBooks = !this.showBooks
-        }
+      toggleShowBooks() {
+        this.showBooks =  !this.showBooks
+      },
     }
-})
-
-app.mount('#app')
+  })
+  
+  app.mount('#app')

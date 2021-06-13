@@ -6,25 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learning Vue</title>
     <script src="https://unpkg.com/vue@next"></script>
+    <style>
+    .box {
+      padding: 100px 0;
+      width: 400px;
+      text-align: center;
+      background: #ddd;
+      margin: 20px;
+      display: inline-block;
+    }
+    </style>
 </head>
 <body>
-    <h1>Hello, Vue</h1>
-
+    <h1>Hello, Vue :)</h1>
+  
     <div id="app">
-        <div v-if="showBooks">
-            <p>{{title}} - {{age}}</p>
-            <button v-on:click="age++">Increase age</button>
-            <button @click="age--">Decrease age</button> 
-            <button @click="changeTitle">changetitle</button> 
-            <button @click="changeTitle('Title with argument')">Title with Argument</button> 
-        </div>
-        <button @click="toggleShowBooks">
-            <span v-if="showBooks">Hide Books</span>
-            <!-- <span v-if="!showBooks">Show Books</span> -->
-            <span v-else="!showBooks">Show Books</span>
-        </button>
+      <div v-if="showBooks">
+        <ul>
+          <li v-for="book in books">
+            <h3>{{ book.title }}</h3>
+            <p>{{ book.author }}</p>
+          </li>
+        </ul>
+      </div>
+      <div v-else>
+        <p>Click the button below to show books</p>
+      </div>
+      
+      <button @click="toggleShowBooks">
+        <span v-if="showBooks">Hide books</span>
+        <span v-else>Show books</span>
+      </button>
     </div>
-
+  
+  
     <script src="app.js"></script>
-</body>
-</html>
+  </body>
+  </html>
