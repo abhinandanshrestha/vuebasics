@@ -2,5 +2,8 @@ vue create <project-name>
 
 // add node_modules to .gitignore
 // After downloading from github repo
- npm install 
 // This will install all required dependencies from package.json
+ npm install 
+
+
+https://www.youtube.com/watch?v=KM1U6DqZf8M&list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1&index=5

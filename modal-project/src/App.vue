@@ -1,6 +1,10 @@
 <template>
   <h1>{{title}}</h1>
-  <Modal />
+  <!----- Attribute/Data Binding (is used for using dynamic data)--->
+  <!-- <Modal v-bind:header="header" v-bind:text="text"/>  -->
+  <!--- We pass in props from app.vue to children nodes-->
+  <Modal :header="header" :text="text" :theme="sale" /> 
+
 </template>
 
 <script>
@@ -11,6 +15,8 @@ export default {
   components: { Modal },
   data(){
     return{
+      header: 'Signup for the Giveaway',
+      text: 'Grab it in half price',
       title: 'My First Vue App :)'
     }
   }
